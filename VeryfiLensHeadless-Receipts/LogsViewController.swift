@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  LensReceiptsDemo
 //
-//  Created by Diego Giraldo on 24/03/22.
+//  Created by Veryfi on 25/07/23.
 //
 
 import UIKit
@@ -19,11 +19,11 @@ class LogsViewController: UIViewController {
         self.title = "Lens Logs"
         logsTextView.text = "Configuring lens"
         
-        let CLIENT_ID = "vrfK8SekiKYMG3VmifQwB4nmRJl9BplbnxbsYEn"
-        let AUTH_USERNAME = "devapitest"
-        let AUTH_APIKEY = "f339d0936016cb84c7517b26a0932238"
-        let URL = "https://api.veryfi.com/"
-        
+        let CLIENT_ID = getEnvironmentVar(key: "VERYFI_CLIENT_ID") // replace with your assigned Client Id
+        let AUTH_USERNAME = getEnvironmentVar(key: "VERYFI_USERNAME") // replace with your assigned Username
+        let AUTH_APIKEY = getEnvironmentVar(key: "VERYFI_API_KEY") // replace with your assigned API Key
+        let URL = getEnvironmentVar(key: "VERYFI_URL") // replace with your assigned Endpoint URL
+
         let credentials = VeryfiLensHeadlessCredentials(clientId: CLIENT_ID,
                                                         username: AUTH_USERNAME,
                                                         apiKey: AUTH_APIKEY,

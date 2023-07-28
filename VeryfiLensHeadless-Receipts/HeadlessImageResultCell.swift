@@ -2,7 +2,7 @@
 //  HeadlessImageResultCell.swift
 //  Veryfi-Lens
 //
-//  Created by Veryfi on 27/07/23.
+//  Created by Veryfi on 25/07/23.
 //  Copyright © 2023 Veryfi. All rights reserved.
 //
 
