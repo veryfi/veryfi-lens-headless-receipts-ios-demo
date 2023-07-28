@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		445BC3913468A024C5EE55EB /* Pods_VeryfiLensHeadless_Receipts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413702CA23D7CE1835A00B42 /* Pods_VeryfiLensHeadless_Receipts.framework */; };
+		9D220C2F2A744BE5006C1C73 /* HeadlessImageResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D220C2D2A744BE5006C1C73 /* HeadlessImageResultCell.swift */; };
+		9D220C302A744BE5006C1C73 /* HeadlessReceiptsResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D220C2E2A744BE5006C1C73 /* HeadlessReceiptsResultViewController.swift */; };
+		9D5CF7B52A7055F10012AE41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5CF7B42A7055F10012AE41 /* AppDelegate.swift */; };
+		9D5CF7B72A7055F10012AE41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5CF7B62A7055F10012AE41 /* SceneDelegate.swift */; };
+		9D5CF7B92A7055F10012AE41 /* HeadlessReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5CF7B82A7055F10012AE41 /* HeadlessReceiptViewController.swift */; };
+		9D5CF7BC2A7055F10012AE41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5CF7BA2A7055F10012AE41 /* Main.storyboard */; };
+		9D5CF7BE2A7055F20012AE41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D5CF7BD2A7055F20012AE41 /* Assets.xcassets */; };
+		9D5CF7C12A7055F20012AE41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D5CF7BF2A7055F20012AE41 /* LaunchScreen.storyboard */; };
+		9D5CF7CA2A7059800012AE41 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5CF7C92A7059800012AE41 /* CameraView.swift */; };
+		9D5CF7CD2A705AC60012AE41 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5CF7CC2A705AC60012AE41 /* Data+Extension.swift */; };
+		9D5CF7CF2A7060170012AE41 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5CF7CE2A7060170012AE41 /* LogsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9D5CF7DC2A7066B60012AE41 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1B47340C671134592393126A /* Pods-VeryfiLensHeadless-Receipts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryfiLensHeadless-Receipts.release.xcconfig"; path = "Target Support Files/Pods-VeryfiLensHeadless-Receipts/Pods-VeryfiLensHeadless-Receipts.release.xcconfig"; sourceTree = "<group>"; };
+		413702CA23D7CE1835A00B42 /* Pods_VeryfiLensHeadless_Receipts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeryfiLensHeadless_Receipts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		599FB1F02AC17C09CC001FEA /* Pods-VeryfiLensHeadless-Receipts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryfiLensHeadless-Receipts.debug.xcconfig"; path = "Target Support Files/Pods-VeryfiLensHeadless-Receipts/Pods-VeryfiLensHeadless-Receipts.debug.xcconfig"; sourceTree = "<group>"; };
+		9D220C2D2A744BE5006C1C73 /* HeadlessImageResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlessImageResultCell.swift; sourceTree = "<group>"; };
+		9D220C2E2A744BE5006C1C73 /* HeadlessReceiptsResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlessReceiptsResultViewController.swift; sourceTree = "<group>"; };
+		9D5CF7B12A7055F10012AE41 /* VeryfiLensHeadless-Receipts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VeryfiLensHeadless-Receipts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D5CF7B42A7055F10012AE41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9D5CF7B62A7055F10012AE41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9D5CF7B82A7055F10012AE41 /* HeadlessReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlessReceiptViewController.swift; sourceTree = "<group>"; };
+		9D5CF7BB2A7055F10012AE41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D5CF7BD2A7055F20012AE41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D5CF7C02A7055F20012AE41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D5CF7C22A7055F20012AE41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D5CF7C92A7059800012AE41 /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		9D5CF7CC2A705AC60012AE41 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		9D5CF7CE2A7060170012AE41 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D5CF7AE2A7055F10012AE41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				445BC3913468A024C5EE55EB /* Pods_VeryfiLensHeadless_Receipts.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D5CF7A82A7055F10012AE41 = {
+			isa = PBXGroup;
+			children = (
+				9D5CF7B32A7055F10012AE41 /* VeryfiLensHeadless-Receipts */,
+				9D5CF7B22A7055F10012AE41 /* Products */,
+				9F0EEBD5859FD6DF5D21C043 /* Pods */,
+				C33177955447BFC923D95DFB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9D5CF7B22A7055F10012AE41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D5CF7B12A7055F10012AE41 /* VeryfiLensHeadless-Receipts.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D5CF7B32A7055F10012AE41 /* VeryfiLensHeadless-Receipts */ = {
+			isa = PBXGroup;
+			children = (
+				9D5CF7CB2A705AB70012AE41 /* Extensions */,
+				9D5CF7B42A7055F10012AE41 /* AppDelegate.swift */,
+				9D5CF7B62A7055F10012AE41 /* SceneDelegate.swift */,
+				9D5CF7C82A7059800012AE41 /* UI */,
+				9D5CF7B82A7055F10012AE41 /* HeadlessReceiptViewController.swift */,
+				9D5CF7CE2A7060170012AE41 /* LogsViewController.swift */,
+				9D220C2D2A744BE5006C1C73 /* HeadlessImageResultCell.swift */,
+				9D220C2E2A744BE5006C1C73 /* HeadlessReceiptsResultViewController.swift */,
+				9D5CF7BA2A7055F10012AE41 /* Main.storyboard */,
+				9D5CF7BD2A7055F20012AE41 /* Assets.xcassets */,
+				9D5CF7BF2A7055F20012AE41 /* LaunchScreen.storyboard */,
+				9D5CF7C22A7055F20012AE41 /* Info.plist */,
+			);
+			path = "VeryfiLensHeadless-Receipts";
+			sourceTree = "<group>";
+		};
+		9D5CF7C82A7059800012AE41 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9D5CF7C92A7059800012AE41 /* CameraView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9D5CF7CB2A705AB70012AE41 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9D5CF7CC2A705AC60012AE41 /* Data+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9F0EEBD5859FD6DF5D21C043 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				599FB1F02AC17C09CC001FEA /* Pods-VeryfiLensHeadless-Receipts.debug.xcconfig */,
+				1B47340C671134592393126A /* Pods-VeryfiLensHeadless-Receipts.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C33177955447BFC923D95DFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				413702CA23D7CE1835A00B42 /* Pods_VeryfiLensHeadless_Receipts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D5CF7B02A7055F10012AE41 /* VeryfiLensHeadless-Receipts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D5CF7C52A7055F20012AE41 /* Build configuration list for PBXNativeTarget "VeryfiLensHeadless-Receipts" */;
+			buildPhases = (
+				A2237E9AF57B671E3F4FF273 /* [CP] Check Pods Manifest.lock */,
+				9D5CF7AD2A7055F10012AE41 /* Sources */,
+				9D5CF7AE2A7055F10012AE41 /* Frameworks */,
+				9D5CF7AF2A7055F10012AE41 /* Resources */,
+				8DBBB8385B25E11B680FFA67 /* [CP] Embed Pods Frameworks */,
+				9D5CF7DC2A7066B60012AE41 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VeryfiLensHeadless-Receipts";
+			productName = "VeryfiLensHeadless-Receipts";
+			productReference = 9D5CF7B12A7055F10012AE41 /* VeryfiLensHeadless-Receipts.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D5CF7A92A7055F10012AE41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					9D5CF7B02A7055F10012AE41 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 9D5CF7AC2A7055F10012AE41 /* Build configuration list for PBXProject "VeryfiLensHeadless-Receipts" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9D5CF7A82A7055F10012AE41;
+			productRefGroup = 9D5CF7B22A7055F10012AE41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D5CF7B02A7055F10012AE41 /* VeryfiLensHeadless-Receipts */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D5CF7AF2A7055F10012AE41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D5CF7C12A7055F20012AE41 /* LaunchScreen.storyboard in Resources */,
+				9D5CF7BE2A7055F20012AE41 /* Assets.xcassets in Resources */,
+				9D5CF7BC2A7055F10012AE41 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8DBBB8385B25E11B680FFA67 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeryfiLensHeadless-Receipts/Pods-VeryfiLensHeadless-Receipts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VeryfiLensHeadless-Receipts/Pods-VeryfiLensHeadless-Receipts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VeryfiLensHeadless-Receipts/Pods-VeryfiLensHeadless-Receipts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2237E9AF57B671E3F4FF273 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VeryfiLensHeadless-Receipts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D5CF7AD2A7055F10012AE41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D220C2F2A744BE5006C1C73 /* HeadlessImageResultCell.swift in Sources */,
+				9D5CF7B92A7055F10012AE41 /* HeadlessReceiptViewController.swift in Sources */,
+				9D5CF7B52A7055F10012AE41 /* AppDelegate.swift in Sources */,
+				9D220C302A744BE5006C1C73 /* HeadlessReceiptsResultViewController.swift in Sources */,
+				9D5CF7CD2A705AC60012AE41 /* Data+Extension.swift in Sources */,
+				9D5CF7B72A7055F10012AE41 /* SceneDelegate.swift in Sources */,
+				9D5CF7CA2A7059800012AE41 /* CameraView.swift in Sources */,
+				9D5CF7CF2A7060170012AE41 /* LogsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9D5CF7BA2A7055F10012AE41 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D5CF7BB2A7055F10012AE41 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9D5CF7BF2A7055F20012AE41 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D5CF7C02A7055F20012AE41 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D5CF7C32A7055F20012AE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9D5CF7C42A7055F20012AE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D5CF7C62A7055F20012AE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 599FB1F02AC17C09CC001FEA /* Pods-VeryfiLensHeadless-Receipts.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VeryfiLensHeadless-Receipts/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Scan documents";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Back up your document images in your photo gallery";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.veryfi.VeryfiLensHeadless-Receipts";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9D5CF7C72A7055F20012AE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B47340C671134592393126A /* Pods-VeryfiLensHeadless-Receipts.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "VeryfiLensHeadless-Receipts/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Scan documents";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Back up your document images in your photo gallery";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.veryfi.VeryfiLensHeadless-Receipts";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D5CF7AC2A7055F10012AE41 /* Build configuration list for PBXProject "VeryfiLensHeadless-Receipts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D5CF7C32A7055F20012AE41 /* Debug */,
+				9D5CF7C42A7055F20012AE41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D5CF7C52A7055F20012AE41 /* Build configuration list for PBXNativeTarget "VeryfiLensHeadless-Receipts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D5CF7C62A7055F20012AE41 /* Debug */,
+				9D5CF7C72A7055F20012AE41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D5CF7A92A7055F10012AE41 /* Project object */;
+}
