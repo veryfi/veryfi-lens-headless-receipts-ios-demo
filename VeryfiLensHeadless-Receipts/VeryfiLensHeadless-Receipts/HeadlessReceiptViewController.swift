@@ -22,16 +22,6 @@ class HeadlessReceiptViewController: UIViewController {
         }
     }
     
-    @IBAction func didTapGallery(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func didTapTorch(_ sender: UIButton) {
-        isTorchOn = !isTorchOn
-        cameraView.torchMode = isTorchOn ? .on : .off
-        torchButton.setImage(UIImage(named: isTorchOn ? "bolt.fill" : "bolt.slash.fill"), for: .normal)
-    }
-    
     @IBAction func willClose(_ sender: Any) {
         VeryfiLensHeadless.shared().close()
     }
@@ -98,6 +88,12 @@ class HeadlessReceiptViewController: UIViewController {
             self?.shouldCaptureFrames = false
             VeryfiLensHeadless.shared().stopProcessingBuffer()
             VeryfiLensHeadless.shared().close()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as?  HeadlessReceiptsResultViewController {
+            destination.resultImages = sender as? [UIImage]
         }
     }
 }

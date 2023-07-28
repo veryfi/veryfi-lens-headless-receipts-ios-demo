@@ -17,11 +17,12 @@ class LogsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Lens Logs"
+        logsTextView.text = "Configuring lens"
         
-        let CLIENT_ID = getEnvironmentVar(key: "VERYFI_CLIENT_ID") // replace with your assigned Client Id
-        let AUTH_USERNAME = getEnvironmentVar(key: "VERYFI_USERNAME") // replace with your assigned Username
-        let AUTH_APIKEY = getEnvironmentVar(key: "VERYFI_API_KEY") // replace with your assigned API Key
-        let URL = getEnvironmentVar(key: "VERYFI_URL") // replace with your assigned Endpoint URL
+        let CLIENT_ID = "vrfK8SekiKYMG3VmifQwB4nmRJl9BplbnxbsYEn"
+        let AUTH_USERNAME = "devapitest"
+        let AUTH_APIKEY = "f339d0936016cb84c7517b26a0932238"
+        let URL = "https://api.veryfi.com/"
         
         let credentials = VeryfiLensHeadlessCredentials(clientId: CLIENT_ID,
                                                         username: AUTH_USERNAME,
@@ -42,6 +43,10 @@ class LogsViewController: UIViewController {
                                                             handler: nil))
                     
                     self?.present(alertController, animated: true, completion: nil)
+                }
+            } else {
+                DispatchQueue.main.async { [weak self] in
+                    self?.logsTextView.text = "Tap on the bellow button to try out Lens!"
                 }
             }
             self.isLensConfigured = success
@@ -71,10 +76,6 @@ class LogsViewController: UIViewController {
 
 extension LogsViewController: VeryfiLensHeadlessDelegate {
     func veryfiLensClose(_ json: [String : Any]) {
-        if let receiptHeadless = topViewController as? HeadlessReceiptViewController {
-            receiptHeadless.dismiss(animated: true)
-            topViewController = nil
-        }
         if let string = string(from: json) {
             logsTextView.text.append("\n\(string)")
         }
@@ -83,6 +84,11 @@ extension LogsViewController: VeryfiLensHeadlessDelegate {
     func veryfiLensError(_ json: [String : Any]) {
         if let string = string(from: json) {
             logsTextView.text.append("\n\(string)")
+        }
+        if let receiptHeadless = topViewController as? HeadlessReceiptViewController {
+            DispatchQueue.main.async {
+                receiptHeadless.progressLabel.text = ""
+            }
         }
     }
     
@@ -95,6 +101,29 @@ extension LogsViewController: VeryfiLensHeadlessDelegate {
     func veryfiLensUpdate(_ json: [String : Any]) {
         if let string = string(from: json) {
             logsTextView.text.append("\n\(string)")
+        }
+        
+        if let receiptHeadless = topViewController as? HeadlessReceiptViewController {
+            
+            if let message = json["msg"] as? String,
+               message == "autocapture",
+               let data = json["data"] as? [String : Any],
+               let autocaptureStatus = data["status"] as? String {
+                if autocaptureStatus == "inprogress",
+                   let progress = data["progress"] as? Double,
+                   progress > 0 && progress <= 1 {
+                    DispatchQueue.main.async {
+                        receiptHeadless.progressLabel.text = "\(Int(progress*100))%"
+                    }
+                } else if autocaptureStatus == "success" {
+                    DispatchQueue.main.async {
+                        receiptHeadless.progressLabel.text = "100%"
+                    }
+                    if !receiptHeadless.isCapturingImage {
+                        receiptHeadless.cameraView.capture()
+                    }
+                }
+            }
         }
     }
 }
