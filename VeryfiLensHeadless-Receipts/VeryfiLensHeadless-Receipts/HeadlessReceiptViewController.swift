@@ -108,7 +108,7 @@ extension HeadlessReceiptViewController: CameraViewDelegate {
             VeryfiLensHeadless.shared().stopProcessingBuffer()
             let rotatedImage = VeryfiLensHeadless.shared().rotate(image: image)
             let croppedImages = VeryfiLensHeadless.shared().crop(image: rotatedImage)
-            VeryfiLensHeadless.shared().upload(images: croppedImages)
+            performSegue(withIdentifier: "showHeadlessReceiptResult", sender: croppedImages)
             isCapturingImage = false
         }
     }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		445BC3913468A024C5EE55EB /* Pods_VeryfiLensHeadless_Receipts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413702CA23D7CE1835A00B42 /* Pods_VeryfiLensHeadless_Receipts.framework */; };
+		9D220C2F2A744BE5006C1C73 /* HeadlessImageResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D220C2D2A744BE5006C1C73 /* HeadlessImageResultCell.swift */; };
+		9D220C302A744BE5006C1C73 /* HeadlessReceiptsResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D220C2E2A744BE5006C1C73 /* HeadlessReceiptsResultViewController.swift */; };
 		9D5CF7B52A7055F10012AE41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5CF7B42A7055F10012AE41 /* AppDelegate.swift */; };
 		9D5CF7B72A7055F10012AE41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5CF7B62A7055F10012AE41 /* SceneDelegate.swift */; };
 		9D5CF7B92A7055F10012AE41 /* HeadlessReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5CF7B82A7055F10012AE41 /* HeadlessReceiptViewController.swift */; };
@@ -36,6 +38,8 @@
 		1B47340C671134592393126A /* Pods-VeryfiLensHeadless-Receipts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryfiLensHeadless-Receipts.release.xcconfig"; path = "Target Support Files/Pods-VeryfiLensHeadless-Receipts/Pods-VeryfiLensHeadless-Receipts.release.xcconfig"; sourceTree = "<group>"; };
 		413702CA23D7CE1835A00B42 /* Pods_VeryfiLensHeadless_Receipts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeryfiLensHeadless_Receipts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		599FB1F02AC17C09CC001FEA /* Pods-VeryfiLensHeadless-Receipts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryfiLensHeadless-Receipts.debug.xcconfig"; path = "Target Support Files/Pods-VeryfiLensHeadless-Receipts/Pods-VeryfiLensHeadless-Receipts.debug.xcconfig"; sourceTree = "<group>"; };
+		9D220C2D2A744BE5006C1C73 /* HeadlessImageResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlessImageResultCell.swift; sourceTree = "<group>"; };
+		9D220C2E2A744BE5006C1C73 /* HeadlessReceiptsResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadlessReceiptsResultViewController.swift; sourceTree = "<group>"; };
 		9D5CF7B12A7055F10012AE41 /* VeryfiLensHeadless-Receipts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VeryfiLensHeadless-Receipts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D5CF7B42A7055F10012AE41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D5CF7B62A7055F10012AE41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				9D5CF7C82A7059800012AE41 /* UI */,
 				9D5CF7B82A7055F10012AE41 /* HeadlessReceiptViewController.swift */,
 				9D5CF7CE2A7060170012AE41 /* LogsViewController.swift */,
+				9D220C2D2A744BE5006C1C73 /* HeadlessImageResultCell.swift */,
+				9D220C2E2A744BE5006C1C73 /* HeadlessReceiptsResultViewController.swift */,
 				9D5CF7BA2A7055F10012AE41 /* Main.storyboard */,
 				9D5CF7BD2A7055F20012AE41 /* Assets.xcassets */,
 				9D5CF7BF2A7055F20012AE41 /* LaunchScreen.storyboard */,
@@ -245,8 +251,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D220C2F2A744BE5006C1C73 /* HeadlessImageResultCell.swift in Sources */,
 				9D5CF7B92A7055F10012AE41 /* HeadlessReceiptViewController.swift in Sources */,
 				9D5CF7B52A7055F10012AE41 /* AppDelegate.swift in Sources */,
+				9D220C302A744BE5006C1C73 /* HeadlessReceiptsResultViewController.swift in Sources */,
 				9D5CF7CD2A705AC60012AE41 /* Data+Extension.swift in Sources */,
 				9D5CF7B72A7055F10012AE41 /* SceneDelegate.swift in Sources */,
 				9D5CF7CA2A7059800012AE41 /* CameraView.swift in Sources */,
