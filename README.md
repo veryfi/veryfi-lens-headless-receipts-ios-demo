@@ -29,8 +29,8 @@ You can watch our video:
 4. [Other platforms](#other_platforms)
 5. [Get in contact with our team](#contact)
 
-## Veryfi Lens Receipts & Invoices iOS Example <a name="example"></a>
-This is an example of how to use Veryfi Lens Receipts & Invoices in your app, you can find the developer documentation [here](https://app.veryfi.com/lens/docs/ios/).
+## Veryfi Lens Headless Receipts & Invoices iOS Example <a name="example"></a>
+This is an example of how to use Veryfi Lens Headless Receipts & Invoices in your app, you can find the developer documentation [here](https://app.veryfi.com/lens/docs/ios/).
 
 ![receipt-demo](https://user-images.githubusercontent.com/8684090/236651344-306b1f55-a690-4151-87bd-c08d4d9297de.gif)
 
@@ -40,7 +40,7 @@ Install from our private [Cocoapods](https://hub.veryfi.com/api/settings/keys).
 
 Add in your project Podfile file the Veryfi Lens Receipts iOS SDK dependency:
 ```ruby
-pod 'VeryfiLens-Receipts', '2.0.11.1'
+pod 'VeryfiLensHeadless-Receipts', '2.1.12.10'
 ```
 
 ## How to run this project <a name="configuration"></a>
