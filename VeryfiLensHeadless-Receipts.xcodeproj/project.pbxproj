@@ -21,19 +21,6 @@
 		9D5CF7CF2A7060170012AE41 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5CF7CE2A7060170012AE41 /* LogsViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		9D5CF7DC2A7066B60012AE41 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		1B47340C671134592393126A /* Pods-VeryfiLensHeadless-Receipts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeryfiLensHeadless-Receipts.release.xcconfig"; path = "Target Support Files/Pods-VeryfiLensHeadless-Receipts/Pods-VeryfiLensHeadless-Receipts.release.xcconfig"; sourceTree = "<group>"; };
 		413702CA23D7CE1835A00B42 /* Pods_VeryfiLensHeadless_Receipts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeryfiLensHeadless_Receipts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,8 +133,8 @@
 				9D5CF7AD2A7055F10012AE41 /* Sources */,
 				9D5CF7AE2A7055F10012AE41 /* Frameworks */,
 				9D5CF7AF2A7055F10012AE41 /* Resources */,
-				8DBBB8385B25E11B680FFA67 /* [CP] Embed Pods Frameworks */,
-				9D5CF7DC2A7066B60012AE41 /* Embed Frameworks */,
+				9D220C312A783114006C1C73 /* Add environment variables */,
+				3B8C463512EE0C006467D509 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,7 +192,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8DBBB8385B25E11B680FFA67 /* [CP] Embed Pods Frameworks */ = {
+		3B8C463512EE0C006467D509 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -221,6 +208,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VeryfiLensHeadless-Receipts/Pods-VeryfiLensHeadless-Receipts-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		9D220C312A783114006C1C73 /* Add environment variables */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Add environment variables";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ -f ./env-variables.sh ]\nthen\nsource ./env-variables.sh\nfi\nINFO_PLIST=\"$BUILT_PRODUCTS_DIR/$INFOPLIST_PATH\"\n/usr/libexec/PlistBuddy -c \"Add :VERYFI_CLIENT_ID string $VERYFI_CLIENT_ID\" \"$INFO_PLIST\"\n/usr/libexec/PlistBuddy -c \"Add :VERYFI_USERNAME string $VERYFI_USERNAME\" \"$INFO_PLIST\"\n/usr/libexec/PlistBuddy -c \"Add :VERYFI_API_KEY string $VERYFI_API_KEY\" \"$INFO_PLIST\"\n/usr/libexec/PlistBuddy -c \"Add :VERYFI_URL string $VERYFI_URL\" \"$INFO_PLIST\"\n";
 		};
 		A2237E9AF57B671E3F4FF273 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -252,8 +257,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D220C2F2A744BE5006C1C73 /* HeadlessImageResultCell.swift in Sources */,
-				9D5CF7B92A7055F10012AE41 /* HeadlessReceiptViewController.swift in Sources */,
 				9D5CF7B52A7055F10012AE41 /* AppDelegate.swift in Sources */,
+				9D5CF7B92A7055F10012AE41 /* HeadlessReceiptViewController.swift in Sources */,
 				9D220C302A744BE5006C1C73 /* HeadlessReceiptsResultViewController.swift in Sources */,
 				9D5CF7CD2A705AC60012AE41 /* Data+Extension.swift in Sources */,
 				9D5CF7B72A7055F10012AE41 /* SceneDelegate.swift in Sources */,
