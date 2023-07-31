@@ -32,7 +32,7 @@ You can watch our video:
 ## Veryfi Lens Headless Receipts & Invoices iOS Example <a name="example"></a>
 This is an example of how to use Veryfi Lens Headless Receipts & Invoices in your app, you can find the developer documentation [here](https://app.veryfi.com/lens/docs/ios/).
 
-![receipt-demo](https://user-images.githubusercontent.com/8684090/236651344-306b1f55-a690-4151-87bd-c08d4d9297de.gif)
+![headless-receipts-demo](https://github.com/veryfi/veryfi-lens-headless-receipts-ios-demo/assets/8684090/ae04279c-e5c3-49b9-b38f-9d9d36838102)
 
 ## How to add Veryfi Lens Receipts to your project <a name="cocoapods"></a>
 
