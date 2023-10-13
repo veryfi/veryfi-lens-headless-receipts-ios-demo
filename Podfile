@@ -4,7 +4,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'VeryfiLensHeadless-Receipts' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'VeryfiLensHeadless-Receipts', '2.1.19.1'
+  pod 'VeryfiLensHeadless-Receipts', '2.1.20.2'
 
   # Pods for VeryfiLensHeadless-Receipts
 
