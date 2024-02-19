@@ -96,6 +96,22 @@ extension LogsViewController: VeryfiLensHeadlessDelegate {
         if let string = string(from: json) {
             logsTextView.text.append("\n\(string)")
         }
+        if let receiptHeadless = topViewController as? HeadlessReceiptViewController {
+            if let message = json["msg"] as? String,
+               message == "autocapture",
+               let data = json["data"] as? [String: Any],
+               let autocaptureStatus = data["status"] as? String {
+                if autocaptureStatus == "success" {
+                    DispatchQueue.main.async {
+                        receiptHeadless.progressLabel.text = "100%"
+                    }
+                    if !receiptHeadless.isCapturingImage {
+                        receiptHeadless.cameraView.capture()
+                    }
+                    
+                }
+            }
+        }
     }
     
     func veryfiLensUpdate(_ json: [String : Any]) {
@@ -104,23 +120,15 @@ extension LogsViewController: VeryfiLensHeadlessDelegate {
         }
         
         if let receiptHeadless = topViewController as? HeadlessReceiptViewController {
-            
             if let message = json["msg"] as? String,
                message == "autocapture",
-               let data = json["data"] as? [String : Any],
+               let data = json["data"] as? [String: Any],
                let autocaptureStatus = data["status"] as? String {
                 if autocaptureStatus == "inprogress",
                    let progress = data["progress"] as? Double,
                    progress > 0 && progress <= 1 {
                     DispatchQueue.main.async {
                         receiptHeadless.progressLabel.text = "\(Int(progress*100))%"
-                    }
-                } else if autocaptureStatus == "success" {
-                    DispatchQueue.main.async {
-                        receiptHeadless.progressLabel.text = "100%"
-                    }
-                    if !receiptHeadless.isCapturingImage {
-                        receiptHeadless.cameraView.capture()
                     }
                 }
             }
