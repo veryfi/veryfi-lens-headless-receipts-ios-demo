@@ -15,6 +15,8 @@ class HeadlessReceiptViewController: UIViewController {
     @IBOutlet weak var torchButton: UIButton!
     @IBOutlet weak var progressLabel: UILabel!
     
+    private var uncroppedImage: UIImage?
+
     @IBAction func didTapCapture(_ sender: UIButton) {
         if !isCapturingImage {
             isCapturingImage = !isCapturingImage
@@ -93,7 +95,11 @@ class HeadlessReceiptViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as?  HeadlessReceiptsResultViewController {
-            destination.resultImages = sender as? [UIImage]
+            guard let croppedImages = sender as? [UIImage], !croppedImages.isEmpty else {
+                destination.resultImages = [uncroppedImage ?? UIImage()]
+                return
+            }
+            destination.resultImages = croppedImages
         }
     }
 }
@@ -103,18 +109,25 @@ extension HeadlessReceiptViewController: CameraViewDelegate {
         if isLensInitialized {
             VeryfiLensHeadless.shared().stopProcessingBuffer()
             let rotatedImage = VeryfiLensHeadless.shared().rotate(image: image)
-            let croppedImages = VeryfiLensHeadless.shared().crop(image: rotatedImage)
-            performSegue(withIdentifier: "showHeadlessReceiptResult", sender: croppedImages)
+            uncroppedImage = image
+            VeryfiLensHeadless.shared().crop(image: rotatedImage) { [weak self] croppedImages in
+                self?.performSegue(withIdentifier: "showHeadlessReceiptResult", sender: croppedImages)
+            }
             isCapturingImage = false
         }
     }
     
     func cameraView(_ cameraView: CameraView, didCapture frame: CMSampleBuffer) {
         if isLensInitialized && shouldCaptureFrames {
-            VeryfiLensHeadless.shared().process(buffer: frame)
-            let rectangles = VeryfiLensHeadless.shared().detectedDocuments(for: frame, videoPreviewLayer: cameraView.previewLayer)
-            DispatchQueue.main.async {
-                cameraView.drawBorders(rectangles)
+            VeryfiLensHeadless.shared().processWithBlock(buffer: frame) { rectangles, buffer in
+                let convertedRectangles = VeryfiLensHeadless.shared().adjustedRectangles(
+                    rectangles,
+                    for: buffer,
+                    videoPreviewLayer: cameraView.previewLayer
+                )
+                DispatchQueue.main.async {
+                    cameraView.drawBorders(convertedRectangles)
+                }
             }
         }
     }
