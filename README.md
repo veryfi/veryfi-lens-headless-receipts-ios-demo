@@ -40,7 +40,7 @@ Install from our private [Cocoapods](https://hub.veryfi.com/api/settings/keys).
 
 Add in your project Podfile file the Veryfi Lens Receipts iOS SDK dependency:
 ```ruby
-pod 'VeryfiLensHeadless-Receipts', '2.1.58.10'
+pod 'VeryfiLensHeadless-Receipts', '2.1.59.9'
 ```
 
 ## How to run this project <a name="configuration"></a>
