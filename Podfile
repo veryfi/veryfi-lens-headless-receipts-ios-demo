@@ -5,7 +5,7 @@ target 'VeryfiLensHeadless-Receipts' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   
-  pod 'VeryfiLensHeadless-Receipts', '3.0.0.16'
+  pod 'VeryfiLensHeadless-Receipts', '3.0.0.13'
 
   # Pods for VeryfiLensHeadless-Receipts
 
