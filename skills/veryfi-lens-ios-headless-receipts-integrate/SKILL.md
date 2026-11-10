@@ -65,7 +65,7 @@ Headless receipts:
 - Any-Documents is a broad solution: `any_document` plus `anyDocumentTemplate`. Nutrition facts, US passport, driver license, and prescription labels are shortcut flavors of Any-Documents, not separate products. Contact support for another template, including one that is not supported yet. Do not set `anyDocumentType`. This binary is not that solution.
 - Local fraud detection and local field detection are paid features gated by the validated account and backend entitlement. They are not properties of this headless settings type. Do not invent `fraudDetectionIsOn` or `documentFieldsToDetect` here. Field detection also needs the Field Detection or Remote Models flavor on the UI SDK.
 - Bank-check TIFF (`retrieveCheckTiffIsOn`) requires Remote Models. It is not part of this product and it is not in the Checks-specific UI flavor yet, because the TIFF model is large.
-- When installed size matters, recommend Remote Models for flavors that embed heavy models, and measure the final app with this SDK linked and without it. Do not quote the XCFramework file size. [SDK binary sizes](https://docs.veryfi.com/lens/mobile/settings/sdk_binary_sizes/).
+- When installed size matters, Remote Models is the full-feature UI package (`veryfi-lens-spm-remote-models`, pod `VeryfiLens-RemoteModels`, Android `com.veryfi.lens:veryfi-lens-remote-models-sdk`). Models download after the first successful `configure`. This headless binary stays the package when the host owns the camera. Measure the final app with this SDK linked and without it. Do not quote the XCFramework file size. [Remote Models](https://docs.veryfi.com/lens/mobile/remote-models/). [SDK binary sizes](https://docs.veryfi.com/lens/mobile/settings/sdk_binary_sizes/).
 - `VeryfiLens.shared().uploadImages` and `VeryfiLens.shared().headlessUpload` are UI SDK helpers. They are not this Headless product.
 - Leave `backupImagesToGallery` and `backupImagesToiCloud` false unless the host wants every scan copied into Photos or iCloud. Both default false on this type. The UI SDK’s `backupDocsToGallery` still defaults true, and that property is not this type.
 - UI client code uses `VeryfiLensSettings()`. Demo subclasses are not a client contract. This product does not use them either.
@@ -76,7 +76,7 @@ Headless receipts:
 - Upload at most 4 images. Extras are dropped.
 - Copy image paths inside `veryfiLensUpdate`. There is no public flag to keep local resources.
 - Add bounding boxes, confidence, address parse, or blur response only when the host wants those fields in the cloud response.
-- If size matters, Remote Models is the recommendation for embedded-model flavors. This pack does not claim a Remote Models build replaces this headless binary. Measure the app with and without the dependency you link. [SDK binary sizes](https://docs.veryfi.com/lens/mobile/settings/sdk_binary_sizes/).
+- If size matters, Remote Models (`veryfi-lens-spm-remote-models`, pod `VeryfiLens-RemoteModels`, Android `com.veryfi.lens:veryfi-lens-remote-models-sdk`) is the full-feature UI package for embedded-model flavors. Models download after the first successful `configure`. This pack keeps this headless binary when the host owns the camera. Measure the app with and without the dependency you link. [Remote Models](https://docs.veryfi.com/lens/mobile/remote-models/). [SDK binary sizes](https://docs.veryfi.com/lens/mobile/settings/sdk_binary_sizes/).
 
 ## Do not
 
