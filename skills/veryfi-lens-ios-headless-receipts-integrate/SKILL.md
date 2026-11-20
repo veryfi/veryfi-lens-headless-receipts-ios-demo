@@ -6,6 +6,7 @@ description: >-
   VeryfiLensReceiptSettings, host-owned capture, upload(images:), and cloud
   Process a Document. Use when the app owns the camera or already has receipt
   images and calls VeryfiLensHeadless.
+  Covers Lens analytics events and notification subscription (events.md).
 ---
 
 # Veryfi Lens iOS Headless Receipts
@@ -55,6 +56,7 @@ Headless receipts:
 - [implementation.md](implementation.md)
 - [settings.md](settings.md)
 - [callbacks.md](callbacks.md)
+- [events.md](events.md) — analytics events, metrics, and notification subscription
 - [troubleshooting.md](troubleshooting.md)
 - [clarifications.md](clarifications.md)
 - [checklist.md](checklist.md)
@@ -91,3 +93,7 @@ Headless receipts:
 ## Output
 
 Host sample includes plist keys actually needed, `configure` with `VeryfiLensReceiptSettings`, one of upload or the live buffer path, and a delegate that treats `veryfiLensClose` on `upload(images:)` as upload start.
+
+## Analytics and metrics
+
+Lens already records interaction events. When the host wants those metrics, subscribe as in [events.md](events.md). Use the event names listed there. Do not invent names. On Android, register `com.veryfi.lens.VeryfiLensSecureAnalyticsEvent`, not the deprecated `com.veryfi.lens.VeryfiLensAnalyticsEvent`. A plugin host calls the plugin observe API instead of registering that broadcast itself.
